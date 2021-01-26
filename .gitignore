@@ -1,2 +1,1 @@
-build/com/**/*.class
-build/*.jar
+build
