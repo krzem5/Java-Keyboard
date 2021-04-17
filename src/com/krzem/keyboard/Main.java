@@ -54,6 +54,7 @@ public class Main extends Constants{
 		this.frame.setLocation(K_WINDOW_SIZE.x,K_WINDOW_SIZE.y);
 		this.frame.setBackground(new Color(0,0,0,0));
 		this.frame.addWindowListener(new WindowAdapter(){
+			@Override
 			public void windowClosing(WindowEvent e){
 				cls.quit();
 			}

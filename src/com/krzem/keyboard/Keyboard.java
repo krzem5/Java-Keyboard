@@ -72,12 +72,11 @@ public class Keyboard extends Constants implements NativeKeyListener{
 
 	private void _register(){
 		try{
-			GlobalScreen.registerNativeHook();
-			GlobalScreen.addNativeKeyListener(this);
 			Logger logger=Logger.getLogger(GlobalScreen.class.getPackage().getName());
 			logger.setLevel(Level.OFF);
 			logger.setUseParentHandlers(false);
-			new ProcessBuilder("cmd","/c","cls").inheritIO().start().waitFor();
+			GlobalScreen.registerNativeHook();
+			GlobalScreen.addNativeKeyListener(this);
 		}
 		catch (Exception e){
 			e.printStackTrace();
