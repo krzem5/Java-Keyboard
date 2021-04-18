@@ -109,10 +109,6 @@ public class Keyboard extends Constants implements NativeKeyListener{
 
 
 	private void _generate(){
-		int XXXXX=0;
-
-
-
 		this._kl.add(new Key(this.cls,this,new Rectangle(0,0,52,25),"1-0","Esc"));
 		this._kl.add(new Key(this.cls,this,new Rectangle(52,0,52,25),"59-0","F1"));
 		this._kl.add(new Key(this.cls,this,new Rectangle(104,0,52,25),"60-0","F2"));
@@ -127,9 +123,6 @@ public class Keyboard extends Constants implements NativeKeyListener{
 		this._kl.add(new Key(this.cls,this,new Rectangle(572,0,52,25),"87-0","F11"));
 		this._kl.add(new Key(this.cls,this,new Rectangle(624,0,52,25),"88-0","F12"));
 		this._kl.add(new Key(this.cls,this,new Rectangle(676,0,52,25),"3639-0","Prtscn"));
-
-
-
 		this._kl.add(new Key(this.cls,this,new Rectangle(0,25,50,50),"41-0","~\t`"));
 		this._kl.add(new Key(this.cls,this,new Rectangle(50,25,50,50),"2-0","!\t1"));
 		this._kl.add(new Key(this.cls,this,new Rectangle(100,25,50,50),"3-0","@\t2"));
@@ -144,9 +137,6 @@ public class Keyboard extends Constants implements NativeKeyListener{
 		this._kl.add(new Key(this.cls,this,new Rectangle(550,25,50,50),"12-0","_\t-"));
 		this._kl.add(new Key(this.cls,this,new Rectangle(600,25,50,50),"13-0","+\t="));
 		this._kl.add(new Key(this.cls,this,new Rectangle(650,25,78,50),"14-0","Backspace"));
-
-
-
 		this._kl.add(new Key(this.cls,this,new Rectangle(0,75,78,50),"15-0","Tab"));
 		this._kl.add(new Key(this.cls,this,new Rectangle(78,75,50,50),"16-0","Q"));
 		this._kl.add(new Key(this.cls,this,new Rectangle(128,75,50,50),"17-0","W"));
@@ -161,9 +151,6 @@ public class Keyboard extends Constants implements NativeKeyListener{
 		this._kl.add(new Key(this.cls,this,new Rectangle(578,75,50,50),"26-0","{\t["));
 		this._kl.add(new Key(this.cls,this,new Rectangle(628,75,50,50),"27-0","}\t]"));
 		this._kl.add(new Key(this.cls,this,new Rectangle(678,75,50,50),"43-0","|\t\\"));
-
-
-
 		this._kl.add(new Key(this.cls,this,new Rectangle(0,125,89,50),"58-0","Caps Lock"));
 		this._kl.add(new Key(this.cls,this,new Rectangle(89,125,50,50),"30-0","A"));
 		this._kl.add(new Key(this.cls,this,new Rectangle(139,125,50,50),"31-0","S"));
@@ -177,9 +164,6 @@ public class Keyboard extends Constants implements NativeKeyListener{
 		this._kl.add(new Key(this.cls,this,new Rectangle(539,125,50,50),"39-0",":\t;"));
 		this._kl.add(new Key(this.cls,this,new Rectangle(589,125,50,50),"40-0","\"\t\'"));
 		this._kl.add(new Key(this.cls,this,new Rectangle(639,125,89,50),"28-0","Enter"));
-
-
-
 		this._kl.add(new Key(this.cls,this,new Rectangle(0,175,114,50),"42-1","Shift"));
 		this._kl.add(new Key(this.cls,this,new Rectangle(114,175,50,50),"44-0","Z"));
 		this._kl.add(new Key(this.cls,this,new Rectangle(164,175,50,50),"45-0","X"));
@@ -192,9 +176,6 @@ public class Keyboard extends Constants implements NativeKeyListener{
 		this._kl.add(new Key(this.cls,this,new Rectangle(514,175,50,50),"52-0",">\t."));
 		this._kl.add(new Key(this.cls,this,new Rectangle(564,175,50,50),"53-0","?\t/"));
 		this._kl.add(new Key(this.cls,this,new Rectangle(614,175,114,50),"3638-2","Shift"));
-
-
-
 		this._kl.add(new Key(this.cls,this,new Rectangle(0,225,89,50),"29-1","Ctrl"));
 		this._kl.add(new Key(this.cls,this,new Rectangle(89,225,50,50),"3675-1","Win"));
 		this._kl.add(new Key(this.cls,this,new Rectangle(139,225,78,50),"56-1","Alt"));
@@ -203,27 +184,25 @@ public class Keyboard extends Constants implements NativeKeyListener{
 		this._kl.add(new Key(this.cls,this,new Rectangle(539,225,50,50),"3675-2","Win"));
 		this._kl.add(new Key(this.cls,this,new Rectangle(589,225,50,50),"3677-0","Ctx\tMenu"));
 		this._kl.add(new Key(this.cls,this,new Rectangle(639,225,89,50),"29-2","Ctrl"));
-
-
-
-
-		// this._kl.add(new Key(this.cls,this,new Rectangle(XXXXX,XXXXX,XXXXX,XXXXX),"XXXXX","XXXXX"));
 	}
 
 
 
+	@Override
 	public void nativeKeyPressed(NativeKeyEvent e){
 		this._key(e,true);
 	}
 
 
 
+	@Override
 	public void nativeKeyReleased(NativeKeyEvent e){
 		this._key(e,false);
 	}
 
 
 
+	@Override
 	public void nativeKeyTyped(NativeKeyEvent e){
 		this._key(e,false);
 	}

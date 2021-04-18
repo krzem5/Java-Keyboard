@@ -74,7 +74,7 @@ public class Main extends Constants{
 			@Override
 			public void run(){
 				while (cls._break==false){
-					Long s=System.currentTimeMillis();
+					long s=System.currentTimeMillis();
 					try{
 						cls.update();
 						cls.canvas.repaint();
@@ -82,7 +82,7 @@ public class Main extends Constants{
 					catch (Exception e){
 						e.printStackTrace();
 					}
-					Long d=System.currentTimeMillis()-s;
+					long d=System.currentTimeMillis()-s;
 					if (d==0){
 						d=1L;
 					}
